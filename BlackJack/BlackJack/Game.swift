@@ -41,7 +41,7 @@ class Game {
     
     func hitMe(userHit: String, score: Int) -> Int{
         if userHit == userHitMe {
-            player.score += 
+//            player.score +=
         }
         return player.score
     }
@@ -65,7 +65,13 @@ class Game {
         }
     }
     
-//    func gameStatus(playerScore: Int, currentScore: Int) {
-//        if score
-//    }
+    func gameStatus(playerScore: Int, currentScore: Int) {
+        if player.score == 21 {
+            print("You win with BlackJack!")
+        } else if randomCompScore == 21 {
+            print("Computor wins with BlackJack")
+        } else if player.score > 21 {
+            print("Bust 🤭")
+        }
+    }
 }
