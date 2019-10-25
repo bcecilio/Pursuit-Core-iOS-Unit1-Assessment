@@ -9,7 +9,7 @@
 import Foundation
 
 struct Player {
-    var score: Int = Int.random(in: 2...11)
+    var score: Int 
     var cards: [Card]
     var playerName: String 
 }

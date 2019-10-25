@@ -14,7 +14,7 @@ print("There are \(Card.newDeck(aceValue: 1).count) in a deck of cards")
 
 let game = Game()
 
-let userPrompt = "Lets Play Some Black Jack"
+let userPrompt = "LET'S PLAY SOME BLACKJACK"
 
 let gameOver = false
 
@@ -25,8 +25,8 @@ repeat {
     repeat {
         print("Do you want to hit or pass?(hit or pass)")
         var userResponse = readLine() ?? ""
-        print(game.player.score)
-        
+        print(game.hitMe(userHit: "hit", score: 1))
+
     } while (game.hasMoreCards)
-    
+
 } while gameOver

@@ -41,7 +41,7 @@ class Game {
     
     func hitMe(userHit: String, score: Int) -> Int{
         if userHit == userHitMe {
-//            player.score +=
+            player.score += Card.newDeck(aceValue: 1)
         }
         return player.score
     }
