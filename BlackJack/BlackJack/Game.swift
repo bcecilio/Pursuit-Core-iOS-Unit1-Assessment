@@ -36,6 +36,7 @@ class Game {
 
     
     func stopHits(userPass: String, userScore: Int) {
+//        print("Do you want to hit or pass?")
             if userPass == userHitPass {
                 if userScore > randomCompScore {
                     print("You win!")
@@ -45,7 +46,7 @@ class Game {
     
     func hitMe(userHit: String, score: Int) -> Int{
         if userHit == userHitMe {
-            userScore += 1
+            userScore += Card.newDeck(aceValue: <#T##Int#>)
         }
         return userScore
     }

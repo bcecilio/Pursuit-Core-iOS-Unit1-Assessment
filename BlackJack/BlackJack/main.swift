@@ -12,4 +12,21 @@ import Foundation
 print("There are \(Card.newDeck(aceValue: 1).count) in a deck of cards")
 // There are 52 in a deck of cards
 
-let game = Game.newGame
+let game = Game()
+
+let userPrompt = "Lets Play Some Black Jack"
+
+let gameOver = false
+
+repeat {
+    print()
+    print(userPrompt)
+    print()
+    repeat {
+        print("Do you want to hit or pass?")
+        var userResponse = readLine() ?? ""
+        print(game.userScore)
+        
+    } while (game.hasMoreCards)
+    
+} while gameOver
