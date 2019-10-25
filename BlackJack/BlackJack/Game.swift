@@ -11,44 +11,43 @@ import Foundation
 class Game {
     
     var deck = [Card]()
-    var player = Player.self
+    var player = Player.init(score: 0, cards: [Card](), playerName: "Brendon")
     var hitPlayer = Bool()
-    var userHitMe = "hit me"
+    var userHitMe = "hit"
     var userHitPass = "pass"
-    var userScore = 0
-    var compScore = 0
     
     // computed properties
     var hasMoreCards: Bool {
         return !deck.isEmpty
     }
     var randomCompScore: Int {
-        let randomInt = 0
+        let randomInt = Int.random(in: 2...11)
         return randomInt
     }
     
     //METHODS
     
-    func newGame(score: Player) {
-        userScore = 0
-        compScore = 0
-    }
-
+//    func newGame(score: Player) {
+//        var userScore = 0
+//        var compScore = 0
+//    }
     
     func stopHits(userPass: String, userScore: Int) {
 //        print("Do you want to hit or pass?")
             if userPass == userHitPass {
                 if userScore > randomCompScore {
                     print("You win!")
+                } else if userScore < randomCompScore{
+                    print("You lose!")
                 }
             }
         }
     
     func hitMe(userHit: String, score: Int) -> Int{
         if userHit == userHitMe {
-            userScore += Card.newDeck(aceValue: <#T##Int#>)
+            player.score += 10
         }
-        return userScore
+        return player.score
     }
     
     func computorVsPlayer(compRandomInt: Int, userScore: Int) {

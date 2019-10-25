@@ -23,9 +23,9 @@ repeat {
     print(userPrompt)
     print()
     repeat {
-        print("Do you want to hit or pass?")
+        print("Do you want to hit or pass?(hit or pass)")
         var userResponse = readLine() ?? ""
-        print(game.userScore)
+        print(game.player.score)
         
     } while (game.hasMoreCards)
     
