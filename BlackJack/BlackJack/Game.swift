@@ -10,7 +10,7 @@ import Foundation
 
 class Game {
     
-    var deck = [Card]()
+    var deck = [Card.newDeck(aceValue: 1)]
     var player = Player.init(score: 0, cards: [Card](), playerName: "Brendon")
     var hitPlayer = Bool()
     var userHitMe = "hit"
@@ -32,16 +32,20 @@ class Game {
 //        var compScore = 0
 //    }
     
-    func getCard() -> Card?{
-        // shuffle the card array
-        deck.shuffle()
-        // popLast removes a card from the array and returns
-        return deck.popLast()
-    }
+//    func getCard() -> Card?{
+//        // shuffle the card array
+//        deck.shuffle()
+//        // popLast removes a card from the array and returns
+//        return deck.popLast()
+//    }
     
     func hitMe(userHit: String, score: Int) -> Int{
         if userHit == userHitMe {
-            player.score += Card.newDeck(aceValue: 1)
+            // shuffle the card array
+            deck.shuffle()
+            // popLast removes a card from the array and returns
+            let randomCard = deck.popLast() ?? 
+            player.score += randomCard.newDeck
         }
         return player.score
     }
