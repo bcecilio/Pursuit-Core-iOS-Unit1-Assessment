@@ -32,6 +32,20 @@ class Game {
 //        var compScore = 0
 //    }
     
+    func getCard() -> Card?{
+        // shuffle the card array
+        deck.shuffle()
+        // popLast removes a card from the array and returns
+        return deck.popLast()
+    }
+    
+    func hitMe(userHit: String, score: Int) -> Int{
+        if userHit == userHitMe {
+            player.score += 
+        }
+        return player.score
+    }
+    
     func stopHits(userPass: String, userScore: Int) {
 //        print("Do you want to hit or pass?")
             if userPass == userHitPass {
@@ -42,13 +56,6 @@ class Game {
                 }
             }
         }
-    
-    func hitMe(userHit: String, score: Int) -> Int{
-        if userHit == userHitMe {
-            player.score += 10
-        }
-        return player.score
-    }
     
     func computorVsPlayer(compRandomInt: Int, userScore: Int) {
         if randomCompScore > userScore {
