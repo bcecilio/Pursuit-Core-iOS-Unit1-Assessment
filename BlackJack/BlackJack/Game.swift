@@ -43,10 +43,8 @@ class Game {
         if userHit == userHitMe {
             // shuffle the card array
             deck.shuffle()
-            // popLast removes a card from the array and returns
-            let randomCard = deck.popLast() ?? 
-            player.score += randomCard.newDeck
         }
+            // popLast removes a card from the array and returns
         return player.score
     }
     
